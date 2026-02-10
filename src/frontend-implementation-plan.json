@@ -1,0 +1,337 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Rainbowz Mind Studio marketing website frontend (React + Tailwind)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build the 7-page marketing site with client-side routing, responsive layouts, and consistent navigation.",
+      "acceptanceCriteria": [
+        "All 7 pages exist and are navigable via client-side routing.",
+        "Each page renders the sections described in the approved wireframes (hero, grids/cards, diagrams/visual metaphors, testimonials/proof where specified, and CTAs).",
+        "Navigation includes links to all primary pages and works on mobile and desktop.",
+        "All pages are responsive and visually consistent."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the top-level app with client-side routing and route-to-page wiring for: Home, About, Our Method, Programs, Results & Outcomes, Parents’ Guide, Contact / Book Demo. Ensure pages are wrapped in the shared site layout and include scroll-to-top behavior on navigation."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Implement the Home page layout (hero + value props + proof/testimonials where specified + CTA blocks) using shared layout primitives and bento-style cards; include the hero visual overlay asset."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Implement the About page with wireframe-specified sections (mission/positioning, approach, credibility/proof as applicable, CTAs) using shared components."
+        },
+        {
+          "path": "frontend/src/pages/OurMethodPage.tsx",
+          "operation": "create",
+          "description": "Create the Our Method page shell and section scaffolding; detailed visuals and specialized blocks are handled under REQ-4."
+        },
+        {
+          "path": "frontend/src/pages/ProgramsPage.tsx",
+          "operation": "create",
+          "description": "Create the Programs page shell with the age-group selector and detail sections; interactive selector + FAQ specifics are handled under REQ-5."
+        },
+        {
+          "path": "frontend/src/pages/ResultsOutcomesPage.tsx",
+          "operation": "create",
+          "description": "Implement the Results & Outcomes page with outcomes cards, measurable-looking but non-medical proof framing, and a clear CTA to book a demo."
+        },
+        {
+          "path": "frontend/src/pages/ParentsGuidePage.tsx",
+          "operation": "create",
+          "description": "Implement the Parents’ Guide page with practical guidance sections, short scannable lists, and CTAs; keep copy concise and English-only."
+        },
+        {
+          "path": "frontend/src/pages/ContactBookDemoPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact / Book Demo page shell; form validation and success state are handled under REQ-6."
+        },
+        {
+          "path": "frontend/src/content/siteNav.ts",
+          "operation": "create",
+          "description": "Add a single source of truth for primary navigation items (labels + routes) so Navbar and Footer can render links consistently without duplication."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create shared layout primitives and reusable UI building blocks (Navbar, Footer, sections, typography, buttons, cards, grids, CTA blocks).",
+      "acceptanceCriteria": [
+        "Shared components are used across pages (no duplicated markup for the same patterns).",
+        "Primary and secondary buttons have consistent styling and hover/focus states.",
+        "Spacing rhythm is consistent across sections and pages."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper that renders the Navbar and Footer and provides consistent page structure (background, max width, section spacing)."
+        },
+        {
+          "path": "frontend/src/components/layout/Navbar.tsx",
+          "operation": "create",
+          "description": "Create a responsive Navbar that renders all primary links from shared nav config, includes a mobile menu pattern, and highlights the active route. Use the shadcn-ui component library for accessible menu/dialog primitives if available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "create",
+          "description": "Create a Footer with repeated primary links, contact placeholders, and a final CTA; keep styling consistent with Navbar and global theme."
+        },
+        {
+          "path": "frontend/src/components/primitives/Container.tsx",
+          "operation": "create",
+          "description": "Create a Container primitive to standardize max-width and horizontal padding across all pages and sections."
+        },
+        {
+          "path": "frontend/src/components/primitives/Section.tsx",
+          "operation": "create",
+          "description": "Create a Section primitive to enforce consistent vertical rhythm, background variants (plain/tinted), and optional section headers."
+        },
+        {
+          "path": "frontend/src/components/primitives/Typography.tsx",
+          "operation": "create",
+          "description": "Create typography building blocks for headings/subheadings/body text that map to Tailwind tokens and enforce consistent sizing and letter-spacing."
+        },
+        {
+          "path": "frontend/src/components/primitives/Button.tsx",
+          "operation": "create",
+          "description": "Create a Button wrapper that standardizes primary/secondary variants and focus/hover states. If composing shadcn-ui Button, do not edit files under frontend/src/components/ui; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/primitives/Card.tsx",
+          "operation": "create",
+          "description": "Create Card variants (bento/outline/soft) for consistent marketing sections. If composing shadcn-ui Card, do not edit files under frontend/src/components/ui; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/blocks/CtaBlock.tsx",
+          "operation": "create",
+          "description": "Create a reusable CTA block (headline + short copy + primary/secondary actions) used across pages to avoid duplicated markup."
+        },
+        {
+          "path": "frontend/src/components/blocks/FeatureGrid.tsx",
+          "operation": "create",
+          "description": "Create a reusable grid preset for feature/value-prop cards (supports icons, titles, 1–2 lines of text) to standardize bento-style sections."
+        },
+        {
+          "path": "frontend/src/components/blocks/TestimonialStrip.tsx",
+          "operation": "create",
+          "description": "Create a reusable testimonials/proof strip component to be placed on pages where proof is specified in the wireframes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply the site-wide Tailwind design system per the provided style guide (calm scientific aesthetic, typography, spacing, English copy).",
+      "acceptanceCriteria": [
+        "Global styling matches the specified palette and typography (Inter-like sans-serif, strong headings, readable body).",
+        "Section spacing follows the defined vertical rhythm (roughly 80–100px between major sections on desktop, appropriately reduced on mobile).",
+        "All user-facing copy is in English and matches the provided short-form copy where supplied (e.g., Home hero headline and CTAs)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global Tailwind base styles: set CSS variables for the palette, apply global typography defaults (Inter-like sans-serif stack), define consistent section spacing helpers, and establish background/foreground defaults aligned to the calm scientific theme."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens to reflect the style guide (fontFamily sans, refined radii/shadows, optional custom spacing tokens for major sections) while keeping the existing CSS-variable color system intact."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure document-level metadata supports the marketing site (language already set to en, update/confirm title if needed) and keep the site English-only."
+        },
+        {
+          "path": "frontend/src/content/siteCopy.ts",
+          "operation": "create",
+          "description": "Centralize short-form English copy (headlines, subheads, CTA labels, concise blurbs) so pages reuse consistent wording and tone across the site."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement the Our Method page with required diagrams, cards, staircase, network graphic, and comparison table (non-proprietary).",
+      "acceptanceCriteria": [
+        "The page includes all required sections in the stated order (or an equally clear logical order).",
+        "Techniques are presented as categories without revealing proprietary step-by-step activities.",
+        "The comparison section is a clear 2-column layout with 4 comparison points maximum.",
+        "Visuals favor diagrams/abstract graphics over cartoon brains or heavy academic visuals."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/OurMethodPage.tsx",
+          "operation": "modify",
+          "description": "Implement full Our Method page structure: (1) system overview diagram section (Technique → Brain Skill → Better Learning) using the generated diagram asset, (2) four brain-skill cards (Focus, Working Memory, Processing Speed, Creativity) using shared Card + thin-line icons, (3) technique category blocks (high-level categories only), (4) age-wise development staircase section using the generated staircase asset, (5) simple science network dots/lines section using the generated network asset, and (6) a 2-column comparison table (Traditional vs Rainbowz) with max 4 comparison points. Keep visuals abstract and calm; avoid proprietary step-by-step details."
+        },
+        {
+          "path": "frontend/src/components/blocks/ComparisonTable.tsx",
+          "operation": "create",
+          "description": "Create a reusable 2-column comparison table block with a hard cap of 4 rows and a clear, readable layout for desktop and mobile."
+        },
+        {
+          "path": "frontend/src/components/blocks/DiagramPanel.tsx",
+          "operation": "create",
+          "description": "Create a reusable diagram panel block (title + short explanation + responsive image + caption/alt text) to standardize how abstract graphics are presented on the Our Method page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement Programs page with age-group selector, per-group details, per-group CTA, and a concise FAQ strip.",
+      "acceptanceCriteria": [
+        "Users can easily scan/select each age group and view its details.",
+        "Each age group section includes the required sub-blocks and CTA.",
+        "FAQ strip displays 4–5 concise questions in an easy-to-scan UI (e.g., accordions or compact list)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProgramsPage.tsx",
+          "operation": "modify",
+          "description": "Implement the age-group selector (5–7, 8–10, 11–14) with clear active state and responsive layout. For each group, render: what this age needs (1 line), skills trained, weekly structure, and a 'Book Demo for This Age' CTA that navigates to Contact / Book Demo with the age preselected (via querystring or location state). Add a concise FAQ strip at the bottom."
+        },
+        {
+          "path": "frontend/src/content/programs.ts",
+          "operation": "create",
+          "description": "Add structured content for the three age groups (needs line, skills list, weekly structure bullets, CTA label) and 4–5 FAQ items to keep the page component clean and consistent."
+        },
+        {
+          "path": "frontend/src/components/blocks/AgeGroupSelector.tsx",
+          "operation": "create",
+          "description": "Create a reusable selector control for age groups with accessible button semantics and keyboard focus styling."
+        },
+        {
+          "path": "frontend/src/components/blocks/FaqStrip.tsx",
+          "operation": "create",
+          "description": "Create a compact FAQ strip component. Prefer composing shadcn-ui Accordion for accessibility and motion; do not edit files under frontend/src/components/ui; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement Contact / Book Demo page with validated form, success state, map-like visual block, and alternate contact options (placeholders).",
+      "acceptanceCriteria": [
+        "Form inputs exist for all required fields and perform basic client-side validation (required fields, simple phone format check).",
+        "Submitting the form provides a clear on-screen success state (e.g., confirmation panel) without requiring external services.",
+        "Alternate contact options are visible and styled consistently with the rest of the site."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactBookDemoPage.tsx",
+          "operation": "modify",
+          "description": "Implement the form (parent name, child age, phone, preferred time) with basic client-side validation and inline error messaging. On submit, show an on-screen confirmation panel (no external integrations). Render a 'map-like' visual block as a styled panel (non-functional) and display alternate contact options (call + WhatsApp) as consistent UI elements (non-functional placeholders). Support preselected age passed from Programs page."
+        },
+        {
+          "path": "frontend/src/components/forms/BookDemoForm.tsx",
+          "operation": "create",
+          "description": "Create a reusable Book Demo form component with controlled inputs, simple phone validation, and a success-state view that can be embedded on the Contact / Book Demo page."
+        },
+        {
+          "path": "frontend/src/components/blocks/AlternateContactOptions.tsx",
+          "operation": "create",
+          "description": "Create UI blocks for alternate contact options (Call, WhatsApp) as styled cards/buttons (placeholders only) consistent with site theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply a consistent calm scientific visual theme across all pages (whitespace, bento cards, geometric accents, thin-line icons, minimal diagrams).",
+      "acceptanceCriteria": [
+        "All pages share the same visual language (cards, typography scale, icon style, section spacing).",
+        "Diagrams/visual metaphors appear as simple abstract graphics (lines, dots, arrows, rounded rectangles), not heavy illustrations.",
+        "No page introduces a conflicting color system, icon style, or spacing system."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/blocks/GeometricAccent.tsx",
+          "operation": "create",
+          "description": "Create a small reusable geometric accent component (subtle lines/dots/rounded shapes) to be used consistently in hero and section headers without heavy illustration."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure Home applies the shared theme: bento-style card grid, thin-line icon usage, consistent section spacing via Section/Container, and abstract accents (no conflicting colors/icons)."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Ensure About applies the same theme tokens (typography scale, cards, spacing, icon style) and uses shared blocks for repeated patterns."
+        },
+        {
+          "path": "frontend/src/pages/ResultsOutcomesPage.tsx",
+          "operation": "modify",
+          "description": "Ensure Results & Outcomes applies the same theme tokens and uses shared blocks (FeatureGrid/TestimonialStrip/CtaBlock) to prevent visual drift."
+        },
+        {
+          "path": "frontend/src/pages/ParentsGuidePage.tsx",
+          "operation": "modify",
+          "description": "Ensure Parents’ Guide applies the same theme tokens and uses shared primitives for sections and typography for consistent rhythm."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add required generated static visual assets under frontend/public/assets/generated and render them in the appropriate sections with responsive sizing and alt text.",
+      "acceptanceCriteria": [
+        "All generated images are stored in frontend/public/assets/generated and are referenced directly by the frontend (no backend image routing).",
+        "Hero and Our Method sections display the generated visuals with proper responsive sizing and alt text.",
+        "No external image hotlinks are required for the core layout to look complete."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-overlay.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated asset file for the abstract geometric hero overlay (local static asset)."
+        },
+        {
+          "path": "frontend/public/assets/generated/thinline-icons-sprite.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated thin-line icon sprite asset (local static asset) for consistent iconography."
+        },
+        {
+          "path": "frontend/public/assets/generated/method-flow-diagram.dim_1400x400.png",
+          "operation": "create",
+          "description": "Add the generated Technique→Brain Skill→Better Learning diagram asset (local static asset)."
+        },
+        {
+          "path": "frontend/public/assets/generated/age-staircase.dim_1200x600.png",
+          "operation": "create",
+          "description": "Add the generated age-wise development staircase diagram asset (local static asset)."
+        },
+        {
+          "path": "frontend/public/assets/generated/science-network.dim_1200x600.png",
+          "operation": "create",
+          "description": "Add the generated minimal neural network dots/lines graphic asset (local static asset)."
+        },
+        {
+          "path": "frontend/src/components/media/GeneratedImage.tsx",
+          "operation": "create",
+          "description": "Create a small helper component for rendering local generated images with consistent responsive behavior and required alt text."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Render frontend/public/assets/generated/hero-overlay.dim_1600x900.png in the hero section (as a decorative overlay) with appropriate alt handling and responsive sizing."
+        },
+        {
+          "path": "frontend/src/pages/OurMethodPage.tsx",
+          "operation": "modify",
+          "description": "Render the Our Method visuals using local assets: frontend/public/assets/generated/method-flow-diagram.dim_1400x400.png, frontend/public/assets/generated/age-staircase.dim_1200x600.png, and frontend/public/assets/generated/science-network.dim_1200x600.png with responsive sizing and clear alt text. Use frontend/public/assets/generated/thinline-icons-sprite.dim_1024x1024.png (via a small icon component) for the four brain-skill cards."
+        },
+        {
+          "path": "frontend/src/components/media/ThinlineIcon.tsx",
+          "operation": "create",
+          "description": "Create an icon component that displays icons from frontend/public/assets/generated/thinline-icons-sprite.dim_1024x1024.png in a consistent thin-line style across pages. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "kind": "build_request",
+  "title": "Build full Rainbowz Mind Studio marketing website frontend (React + Tailwind)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement the full multi-page marketing website frontend for “Rainbowz Mind Studio” using React + TypeScript and Tailwind CSS, based on the approved information architecture and page layouts: Home, About, Our Method, Programs, Results & Outcomes, Parents’ Guide, and Contact / Book Demo.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "tart building the full frontend application in React + Tailwind"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 7 pages exist and are navigable via client-side routing.",
+        "Each page renders the sections described in the approved wireframes (hero, grids/cards, diagrams/visual metaphors, testimonials/proof where specified, and CTAs).",
+        "Navigation includes links to all primary pages and works on mobile and desktop.",
+        "All pages are responsive and visually consistent."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create shared layout and UI building blocks to ensure consistency across all pages: Navbar, Footer, Container/Section primitives, headings/subheadings, buttons (primary/secondary), card variants, grid presets, and reusable CTA blocks.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "now desing full website frontend"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Shared components are used across pages (no duplicated markup for the same patterns).",
+        "Primary and secondary buttons have consistent styling and hover/focus states.",
+        "Spacing rhythm is consistent across sections and pages."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply the provided UI style guide as the site-wide design system in Tailwind (colors, typography, spacing, and overall “calm scientific” aesthetic). Use English for all user-facing text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Full UI style guide (colors, fonts, spacing)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Global styling matches the specified palette and typography (Inter-like sans-serif, strong headings, readable body).",
+        "Section spacing follows the defined vertical rhythm (roughly 80–100px between major sections on desktop, appropriately reduced on mobile).",
+        "All user-facing copy is in English and matches the provided short-form copy where supplied (e.g., Home hero headline and CTAs)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement the “Our Method” page with the specified structure and visuals: system overview diagram (Technique → Brain Skill → Better Learning), four brain-skill cards (Focus, Working Memory, Processing Speed, Creativity), technique category blocks (high-level only), age-wise development staircase (5–7, 8–10, 11–14), simple science network graphic (dots/lines), and a two-column comparison table (Traditional vs Rainbowz).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Design the “Our Method” page."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page includes all required sections in the stated order (or an equally clear logical order).",
+        "Techniques are presented as categories without revealing proprietary step-by-step activities.",
+        "The comparison section is a clear 2-column layout with 4 comparison points maximum.",
+        "Visuals favor diagrams/abstract graphics over cartoon brains or heavy academic visuals."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement the Programs page with an age-group selector (5–7, 8–10, 11–14) and corresponding program detail sections including: what this age needs (1-line), skills trained, weekly structure, and a “Book Demo for This Age” CTA for each group, plus a concise FAQ strip.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "PROGRAMS PAGE — FULL FRONTEND LAYOUT"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can easily scan/select each age group and view its details.",
+        "Each age group section includes the required sub-blocks and CTA.",
+        "FAQ strip displays 4–5 concise questions in an easy-to-scan UI (e.g., accordions or compact list)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement the Contact / Book Demo page with a form that captures: parent name, child age, phone, and preferred time, plus a “Map-like” visual block and alternate contact options (call and WhatsApp) rendered as UI elements (non-functional placeholders if no integration is provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "CONTACT / BOOK DEMO — FULL FRONTEND LAYOUT"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form inputs exist for all required fields and perform basic client-side validation (required fields, simple phone format check).",
+        "Submitting the form provides a clear on-screen success state (e.g., confirmation panel) without requiring external services.",
+        "Alternate contact options are visible and styled consistently with the rest of the site."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add a coherent, consistent visual theme across the site (calm scientific, child-friendly but not childish) using generous whitespace, bento-style cards, subtle geometric accents, thin-line iconography, and minimal abstract diagrams—ensuring the theme is applied consistently on every page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "calm scientific aesthetic that feels child‑friendly but not childish"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages share the same visual language (cards, typography scale, icon style, section spacing).",
+        "Diagrams/visual metaphors appear as simple abstract graphics (lines, dots, arrows, rounded rectangles), not heavy illustrations.",
+        "No page introduces a conflicting color system, icon style, or spacing system."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Generate and include required static visual assets (abstract diagrams/illustrations and thin-line icons) as local static files under frontend/public/assets/generated, and render them in the relevant sections (Hero, Our Method diagrams, and generic iconography).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Visual style guidance: Clean, calm scientific aesthetic. Child photo + subtle cognitive‑themed abstract shapes."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All generated images are stored in frontend/public/assets/generated and are referenced directly by the frontend (no backend image routing).",
+        "Hero and Our Method sections display the generated visuals with proper responsive sizing and alt text.",
+        "No external image hotlinks are required for the core layout to look complete."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose them instead).",
+    "Do not edit files in frontend immutablePaths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Frontend implementation must remain React + TypeScript + Tailwind + React Query (no Next.js).",
+    "Use English for all user-facing text."
+  ],
+  "nonGoals": [
+    "Backend feature development in Motoko (no canister logic required for this marketing site build).",
+    "Third-party integrations for WhatsApp, maps, SMS, email, analytics, or CRM.",
+    "Real-time features (WebSockets/chat).",
+    "Long-form expanded copy beyond the provided short-form copy unless explicitly requested."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract geometric hero overlay with cognitive-themed shapes (hero-overlay.dim_1600x900.png)",
+      "Thin-line icon set (focus, memory, speed, creativity, assess, train, strengthen, apply) in a consistent style (thinline-icons-sprite.dim_1024x1024.png)",
+      "Technique→Brain Skill→Better Learning diagram in calm scientific style (method-flow-diagram.dim_1400x400.png)",
+      "Age-wise development staircase diagram (age-staircase.dim_1200x600.png)",
+      "Minimal neural network dots/lines graphic with one accent node (science-network.dim_1200x600.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Use English for user-facing website text"
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [
+      "Build full Rainbowz Mind Studio marketing website frontend in React + Tailwind based on the provided IA, style guide, wireframes, and copy"
+    ],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

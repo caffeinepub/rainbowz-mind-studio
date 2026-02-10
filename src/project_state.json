@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Design and build a conversion-optimized marketing website for Rainbowz Mind Studio (children’s brain training brand) with defined IA/pages, UI style guide, wireframes, copy, and a React + Tailwind frontend implementation intended to be made live.",
+  "architectural_notes": [
+    "Frontend stack: React + Tailwind CSS.",
+    "Implement reusable UI components (e.g., Container/Section, Buttons, Cards, Grids, Navbar/Footer) and page sections (Hero, ProblemCards, Framework diagram, Steps, Outcomes, Testimonials, CTAs) per blueprint.",
+    "Site pages to implement: Home, About Rainbowz, Our Method, Programs (age-wise), Results & Outcomes, Parents’ Guide/Education, Contact/Book Demo."
+  ],
+  "known_issues": [
+    "Attempt to start the frontend build previously failed with an AI/tooling error ('Our AI couldn't handle that request'); user retried the request."
+  ],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract geometric hero overlay with cognitive-themed shapes (hero-overlay.dim_1600x900.png)\n- Thin-line icon set (focus, memory, speed, creativity, assess, train, strengthen, apply) in a consistent style (thinline-icons-sprite.dim_1024x1024.png)\n- Technique→Brain Skill→Better Learning diagram in calm scientific style (method-flow-diagram.dim_1400x400.png)\n- Age-wise development staircase diagram (age-staircase.dim_1200x600.png)\n- Minimal neural network dots/lines graphic with one accent node (science-network.dim_1200x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-the-full-multi-page-marketing-website-frontend-for-rainbowz-mind-studio-using-react-typescript-and-tailwind-css-based-on-the-approved-information-architecture-and-page-layouts-home-about-our-method-programs-results-outcomes-parents-guide-and-contact-book-demo",
+      "title": "Implement the full multi-page marketing website frontend for “Rainbowz Mind Studio” using React + TypeScript and Tailwind CSS, based on the approved information architecture and page layouts: Home, About, Our Method, Programs, Results & Outcomes, Parents’ Guide, and Contact / Book Demo.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-shared-layout-and-ui-building-blocks-to-ensure-consistency-across-all-pages-navbar-footer-container-section-primitives-headings-subheadings-buttons-primary-secondary-card-variants-grid-presets-and-reusable-cta-blocks",
+      "title": "Create shared layout and UI building blocks to ensure consistency across all pages: Navbar, Footer, Container/Section primitives, headings/subheadings, buttons (primary/secondary), card variants, grid presets, and reusable CTA blocks.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-provided-ui-style-guide-as-the-site-wide-design-system-in-tailwind-colors-typography-spacing-and-overall-calm-scientific-aesthetic-use-english-for-all-user-facing-text",
+      "title": "Apply the provided UI style guide as the site-wide design system in Tailwind (colors, typography, spacing, and overall “calm scientific” aesthetic). Use English for all user-facing text.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-our-method-page-with-the-specified-structure-and-visuals-system-overview-diagram-technique-brain-skill-better-learning-four-brain-skill-cards-focus-working-memory-processing-speed-creativity-technique-category-blocks-high-level-only-age-wise-development-staircase-5-7-8-10-11-14-simple-science-network-graphic-dots-lines-and-a-two-column-comparison-table-traditional-vs-rainbowz",
+      "title": "Implement the “Our Method” page with the specified structure and visuals: system overview diagram (Technique → Brain Skill → Better Learning), four brain-skill cards (Focus, Working Memory, Processing Speed, Creativity), technique category blocks (high-level only), age-wise development staircase (5–7, 8–10, 11–14), simple science network graphic (dots/lines), and a two-column comparison table (Traditional vs Rainbowz).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-programs-page-with-an-age-group-selector-5-7-8-10-11-14-and-corresponding-program-detail-sections-including-what-this-age-needs-1-line-skills-trained-weekly-structure-and-a-book-demo-for-this-age-cta-for-each-group-plus-a-concise-faq-strip",
+      "title": "Implement the Programs page with an age-group selector (5–7, 8–10, 11–14) and corresponding program detail sections including: what this age needs (1-line), skills trained, weekly structure, and a “Book Demo for This Age” CTA for each group, plus a concise FAQ strip.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-contact-book-demo-page-with-a-form-that-captures-parent-name-child-age-phone-and-preferred-time-plus-a-map-like-visual-block-and-alternate-contact-options-call-and-whatsapp-rendered-as-ui-elements-non-functional-placeholders-if-no-integration-is-provided",
+      "title": "Implement the Contact / Book Demo page with a form that captures: parent name, child age, phone, and preferred time, plus a “Map-like” visual block and alternate contact options (call and WhatsApp) rendered as UI elements (non-functional placeholders if no integration is provided).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-coherent-consistent-visual-theme-across-the-site-calm-scientific-child-friendly-but-not-childish-using-generous-whitespace-bento-style-cards-subtle-geometric-accents-thin-line-iconography-and-minimal-abstract-diagrams-ensuring-the-theme-is-applied-consistently-on-every-page",
+      "title": "Add a coherent, consistent visual theme across the site (calm scientific, child-friendly but not childish) using generous whitespace, bento-style cards, subtle geometric accents, thin-line iconography, and minimal abstract diagrams—ensuring the theme is applied consistently on every page.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-required-static-visual-assets-abstract-diagrams-illustrations-and-thin-line-icons-as-local-static-files-under-frontend-public-assets-generated-and-render-them-in-the-relevant-sections-hero-our-method-diagrams-and-generic-iconography",
+      "title": "Generate and include required static visual assets (abstract diagrams/illustrations and thin-line icons) as local static files under frontend/public/assets/generated, and render them in the relevant sections (Hero, Our Method diagrams, and generic iconography).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build the full website frontend application in React + Tailwind (all required pages and shared components) based on the approved structure, style guide, and copy",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Rainbowz Mind Studio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

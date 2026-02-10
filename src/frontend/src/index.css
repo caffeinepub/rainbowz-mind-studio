@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Calm Scientific Palette - Light Mode */
+        --background: 0.99 0 0;
+        --foreground: 0.18 0.02 240;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.18 0.02 240;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.18 0.02 240;
+        
+        --primary: 0.42 0.12 240;
+        --primary-foreground: 0.99 0 0;
+        
+        --secondary: 0.65 0.10 195;
+        --secondary-foreground: 0.99 0 0;
+        
+        --muted: 0.96 0.01 240;
+        --muted-foreground: 0.50 0.02 240;
+        
+        --accent: 0.65 0.10 195;
+        --accent-foreground: 0.18 0.02 240;
+        
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.99 0 0;
+        
+        --border: 0.90 0.01 240;
+        --input: 0.90 0.01 240;
+        --ring: 0.42 0.12 240;
+        
+        --chart-1: 0.65 0.15 195;
+        --chart-2: 0.55 0.12 240;
+        --chart-3: 0.70 0.10 160;
+        --chart-4: 0.60 0.14 280;
+        --chart-5: 0.75 0.12 50;
+        
+        --sidebar: 0.99 0 0;
+        --sidebar-foreground: 0.18 0.02 240;
+        --sidebar-primary: 0.42 0.12 240;
+        --sidebar-primary-foreground: 0.99 0 0;
+        --sidebar-accent: 0.96 0.01 240;
+        --sidebar-accent-foreground: 0.18 0.02 240;
+        --sidebar-border: 0.90 0.01 240;
+        --sidebar-ring: 0.42 0.12 240;
+    }
+
+    .dark {
+        /* Calm Scientific Palette - Dark Mode */
+        --background: 0.15 0.02 240;
+        --foreground: 0.96 0.01 240;
+        
+        --card: 0.20 0.02 240;
+        --card-foreground: 0.96 0.01 240;
+        
+        --popover: 0.18 0.02 240;
+        --popover-foreground: 0.96 0.01 240;
+        
+        --primary: 0.75 0.12 195;
+        --primary-foreground: 0.15 0.02 240;
+        
+        --secondary: 0.30 0.04 240;
+        --secondary-foreground: 0.96 0.01 240;
+        
+        --muted: 0.25 0.02 240;
+        --muted-foreground: 0.65 0.02 240;
+        
+        --accent: 0.35 0.06 195;
+        --accent-foreground: 0.96 0.01 240;
+        
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.96 0.01 240;
+        
+        --border: 0.30 0.02 240;
+        --input: 0.30 0.02 240;
+        --ring: 0.65 0.10 195;
+        
+        --chart-1: 0.65 0.15 195;
+        --chart-2: 0.55 0.12 240;
+        --chart-3: 0.70 0.10 160;
+        --chart-4: 0.60 0.14 280;
+        --chart-5: 0.75 0.12 50;
+        
+        --sidebar: 0.18 0.02 240;
+        --sidebar-foreground: 0.96 0.01 240;
+        --sidebar-primary: 0.75 0.12 195;
+        --sidebar-primary-foreground: 0.15 0.02 240;
+        --sidebar-accent: 0.25 0.02 240;
+        --sidebar-accent-foreground: 0.96 0.01 240;
+        --sidebar-border: 0.30 0.02 240;
+        --sidebar-ring: 0.65 0.10 195;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+}

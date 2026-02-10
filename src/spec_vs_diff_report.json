@@ -1,0 +1,97 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-10T11:23:17.667Z",
+  "summary": "Diff adds a TanStack React Router-based multi-page marketing frontend skeleton with shared layout (Navbar/Footer), reusable blocks (CTA, FAQ, comparison table, age selector), and a contact/demo form with basic validation + success state. However, evidence is insufficient for several specified visuals/assets and some required iconography; there are also a couple of unrequested additions (backend stub and external promotional footer link).",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Generate and include required static visual assets as local static files under frontend/public/assets/generated, and render them in relevant sections (Hero, Our Method diagrams, iconography).",
+      "reason": "The diff summary shows components that reference generated assets (e.g., thinline icon sprite), but does not show any added image files under frontend/public/assets/generated (and omitted files are not verifiable from the provided summary). Also only some required icon names appear supported in code.",
+      "evidence": [
+        "frontend/src/components/media/ThinlineIcon.tsx"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "Thin-line icon set must include (focus, memory, speed, creativity, assess, train, strengthen, apply) in a consistent style and be rendered as needed.",
+      "reason": "ThinlineIcon component only supports four names ('focus' | 'memory' | 'speed' | 'creativity'); the additional required icons are not implemented in the shown code.",
+      "evidence": [
+        "frontend/src/components/media/ThinlineIcon.tsx"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Contact / Book Demo page includes a “Map-like” visual block.",
+      "reason": "While the form and alternate contact options are implemented, no map-like visual block is shown in the provided diff excerpts; the Contact page implementation itself is not included in the visible file list.",
+      "evidence": [
+        "frontend/src/components/forms/BookDemoForm.tsx",
+        "frontend/src/components/blocks/AlternateContactOptions.tsx",
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added a backend Motoko canister stub (actor {}).",
+      "reason": "BuildRequest explicitly states backend feature development is a non-goal for this marketing site build; adding backend code was not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Footer includes an external promotional link to caffeine.ai with UTM parameters and a 'Built with' attribution.",
+      "reason": "Not requested in the BuildRequest and constitutes an external link/promo not part of the specified marketing requirements.",
+      "evidence": [
+        "frontend/src/components/layout/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/blocks/AgeGroupSelector.tsx",
+    "frontend/src/components/blocks/AlternateContactOptions.tsx",
+    "frontend/src/components/blocks/ComparisonTable.tsx",
+    "frontend/src/components/blocks/CtaBlock.tsx",
+    "frontend/src/components/blocks/DiagramPanel.tsx",
+    "frontend/src/components/blocks/FaqStrip.tsx",
+    "frontend/src/components/blocks/FeatureGrid.tsx",
+    "frontend/src/components/blocks/GeometricAccent.tsx",
+    "frontend/src/components/blocks/TestimonialStrip.tsx",
+    "frontend/src/components/forms/BookDemoForm.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Navbar.tsx",
+    "frontend/src/components/layout/SiteLayout.tsx",
+    "frontend/src/components/media/GeneratedImage.tsx",
+    "frontend/src/components/media/ThinlineIcon.tsx",
+    "frontend/src/components/primitives/Button.tsx",
+    "frontend/src/components/primitives/Card.tsx",
+    "frontend/src/components/primitives/Container.tsx",
+    "frontend/src/components/primitives/Section.tsx",
+    "frontend/src/components/primitives/Typography.tsx",
+    "frontend/src/content/programs.ts",
+    "frontend/src/content/siteCopy.ts",
+    "frontend/src/content/siteNav.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/ContactBookDemoPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/OurMethodPage.tsx",
+    "frontend/src/pages/ParentsGuidePage.tsx",
+    "frontend/src/pages/ProgramsPage.tsx",
+    "frontend/src/pages/ResultsOutcomesPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

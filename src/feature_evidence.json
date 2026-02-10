@@ -1,0 +1,184 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-the-full-multi-page-marketing-website-frontend-for-rainbowz-mind-studio-using-react-typescript-and-tailwind-css-based-on-the-approved-information-architecture-and-page-layouts-home-about-our-method-programs-results-outcomes-parents-guide-and-contact-book-demo",
+      "featureTitle": "Implement the full multi-page marketing website frontend for “Rainbowz Mind Studio” using React + TypeScript and Tailwind CSS, based on the approved information architecture and page layouts: Home, About, Our Method, Programs, Results & Outcomes, Parents’ Guide, and Contact / Book Demo.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/content/siteNav.ts",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactBookDemoPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/OurMethodPage.tsx",
+        "frontend/src/pages/ParentsGuidePage.tsx",
+        "frontend/src/pages/ProgramsPage.tsx",
+        "frontend/src/pages/ResultsOutcomesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-shared-layout-and-ui-building-blocks-to-ensure-consistency-across-all-pages-navbar-footer-container-section-primitives-headings-subheadings-buttons-primary-secondary-card-variants-grid-presets-and-reusable-cta-blocks",
+      "featureTitle": "Create shared layout and UI building blocks to ensure consistency across all pages: Navbar, Footer, Container/Section primitives, headings/subheadings, buttons (primary/secondary), card variants, grid presets, and reusable CTA blocks.",
+      "files": [
+        "frontend/src/components/blocks/CtaBlock.tsx",
+        "frontend/src/components/blocks/FeatureGrid.tsx",
+        "frontend/src/components/blocks/TestimonialStrip.tsx",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/components/layout/Navbar.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/components/primitives/Button.tsx",
+        "frontend/src/components/primitives/Card.tsx",
+        "frontend/src/components/primitives/Container.tsx",
+        "frontend/src/components/primitives/Section.tsx",
+        "frontend/src/components/primitives/Typography.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-the-provided-ui-style-guide-as-the-site-wide-design-system-in-tailwind-colors-typography-spacing-and-overall-calm-scientific-aesthetic-use-english-for-all-user-facing-text",
+      "featureTitle": "Apply the provided UI style guide as the site-wide design system in Tailwind (colors, typography, spacing, and overall “calm scientific” aesthetic). Use English for all user-facing text.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/content/siteCopy.ts",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-our-method-page-with-the-specified-structure-and-visuals-system-overview-diagram-technique-brain-skill-better-learning-four-brain-skill-cards-focus-working-memory-processing-speed-creativity-technique-category-blocks-high-level-only-age-wise-development-staircase-5-7-8-10-11-14-simple-science-network-graphic-dots-lines-and-a-two-column-comparison-table-traditional-vs-rainbowz",
+      "featureTitle": "Implement the “Our Method” page with the specified structure and visuals: system overview diagram (Technique → Brain Skill → Better Learning), four brain-skill cards (Focus, Working Memory, Processing Speed, Creativity), technique category blocks (high-level only), age-wise development staircase (5–7, 8–10, 11–14), simple science network graphic (dots/lines), and a two-column comparison table (Traditional vs Rainbowz).",
+      "files": [
+        "frontend/src/components/blocks/ComparisonTable.tsx",
+        "frontend/src/components/blocks/DiagramPanel.tsx",
+        "frontend/src/pages/OurMethodPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-programs-page-with-an-age-group-selector-5-7-8-10-11-14-and-corresponding-program-detail-sections-including-what-this-age-needs-1-line-skills-trained-weekly-structure-and-a-book-demo-for-this-age-cta-for-each-group-plus-a-concise-faq-strip",
+      "featureTitle": "Implement the Programs page with an age-group selector (5–7, 8–10, 11–14) and corresponding program detail sections including: what this age needs (1-line), skills trained, weekly structure, and a “Book Demo for This Age” CTA for each group, plus a concise FAQ strip.",
+      "files": [
+        "frontend/src/components/blocks/AgeGroupSelector.tsx",
+        "frontend/src/components/blocks/FaqStrip.tsx",
+        "frontend/src/content/programs.ts",
+        "frontend/src/pages/ProgramsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-contact-book-demo-page-with-a-form-that-captures-parent-name-child-age-phone-and-preferred-time-plus-a-map-like-visual-block-and-alternate-contact-options-call-and-whatsapp-rendered-as-ui-elements-non-functional-placeholders-if-no-integration-is-provided",
+      "featureTitle": "Implement the Contact / Book Demo page with a form that captures: parent name, child age, phone, and preferred time, plus a “Map-like” visual block and alternate contact options (call and WhatsApp) rendered as UI elements (non-functional placeholders if no integration is provided).",
+      "files": [
+        "frontend/src/components/blocks/AlternateContactOptions.tsx",
+        "frontend/src/components/forms/BookDemoForm.tsx",
+        "frontend/src/pages/ContactBookDemoPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-coherent-consistent-visual-theme-across-the-site-calm-scientific-child-friendly-but-not-childish-using-generous-whitespace-bento-style-cards-subtle-geometric-accents-thin-line-iconography-and-minimal-abstract-diagrams-ensuring-the-theme-is-applied-consistently-on-every-page",
+      "featureTitle": "Add a coherent, consistent visual theme across the site (calm scientific, child-friendly but not childish) using generous whitespace, bento-style cards, subtle geometric accents, thin-line iconography, and minimal abstract diagrams—ensuring the theme is applied consistently on every page.",
+      "files": [
+        "frontend/src/components/blocks/GeometricAccent.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ParentsGuidePage.tsx",
+        "frontend/src/pages/ResultsOutcomesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-required-static-visual-assets-abstract-diagrams-illustrations-and-thin-line-icons-as-local-static-files-under-frontend-public-assets-generated-and-render-them-in-the-relevant-sections-hero-our-method-diagrams-and-generic-iconography",
+      "featureTitle": "Generate and include required static visual assets (abstract diagrams/illustrations and thin-line icons) as local static files under frontend/public/assets/generated, and render them in the relevant sections (Hero, Our Method diagrams, and generic iconography).",
+      "files": [
+        "frontend/src/components/media/GeneratedImage.tsx",
+        "frontend/src/components/media/ThinlineIcon.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/OurMethodPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
